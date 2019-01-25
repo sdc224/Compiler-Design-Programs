@@ -304,6 +304,8 @@ int recognize_identifier(char *string)
 					else
 						state = 1;
 				}
+				else
+					state = TRAP;
 
 				break;
 

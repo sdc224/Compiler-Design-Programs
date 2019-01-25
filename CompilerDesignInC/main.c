@@ -3,7 +3,8 @@
 
 int main(void)
 {
-	char str[100];
+	char str[100];	
+	printf("%s", __FILE__);
 
 	printf("Enter the string: ");
 	
