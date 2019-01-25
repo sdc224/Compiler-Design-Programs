@@ -75,7 +75,6 @@ int recognize_ab_star(char string[])
 /**
  * \brief a function to check whether the string is keyword
  * \param string string input for checking/recognizing with DFA
- * \param keywords to collect all the keywords
  * \return if the string is a keyword, returns 1, else 0
  */
 int recognize_keywords(char *string)
@@ -273,6 +272,11 @@ int recognize_keywords(char *string)
 	return state == FINAL ? 1 : 0;		
 }
 
+/**
+ * \brief a function to check whether the string is identifier
+ * \param string string input for checking/recognizing with DFA
+ * \return if the string is an identifier, returns 1, else 0
+ */
 int recognize_identifier(char *string)
 {
 	int length = 0, i = 0, state = 0;
@@ -336,7 +340,11 @@ int recognize_identifier(char *string)
 	return state == 999 ? 1 : 0;
 }
 
-int recognize_keywords_identifiers(char string[])
+/**
+ * \brief a function to check whether the string is identifier or keyword
+ * \param string string input for checking/recognizing with DFA
+ */
+void recognize_keywords_identifiers(char *string)
 {
 	char optional_string[100];
 
@@ -373,6 +381,4 @@ int recognize_keywords_identifiers(char string[])
 			i = j;	
 		}
 	}
-
-	return 0;
 }
