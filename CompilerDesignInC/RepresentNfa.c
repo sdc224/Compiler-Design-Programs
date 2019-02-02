@@ -18,7 +18,7 @@ typedef struct nfa
 
 int main(void)
 {
-	int i, j, k;
+	int i, j, k, l;
 
 	int no_of_states, no_of_final_state;
 	const int no_of_relations = 0;
