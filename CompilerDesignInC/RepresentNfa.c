@@ -33,16 +33,16 @@ int main(void)
 	// Taking all the user inputs
 
 	printf("Enter no of states: ");
-	scanf("%d", &no_of_states);
-
+	scanf_s("%d", &no_of_states);
+	
 	printf("Enter no of final states: ");
-	scanf("%d", &no_of_final_state);
+	scanf_s("%d", &no_of_final_state);
 
 	printf("Enter index(State no) of final states: ");
 	for (i = 0; i < no_of_final_state; i++)
 	{
 		int index;
-		scanf("%d", &index);
+		scanf_s("%d", &index);
 		final_states[index] = FINAL_STATE;
 	}
 
