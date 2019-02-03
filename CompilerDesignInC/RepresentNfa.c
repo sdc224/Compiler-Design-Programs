@@ -18,7 +18,7 @@ typedef struct nfa
 
 int main(void)
 {
-	int i, j, k;
+	int i, j, k, l;
 
 	int no_of_states, no_of_final_state;
 	const int no_of_relations = 0;
@@ -33,16 +33,16 @@ int main(void)
 	// Taking all the user inputs
 
 	printf("Enter no of states: ");
-	scanf_s("%d", &no_of_states);
+	scanf("%d", &no_of_states);
 
 	printf("Enter no of final states: ");
-	scanf_s("%d", &no_of_final_state);
+	scanf("%d", &no_of_final_state);
 
 	printf("Enter index(State no) of final states: ");
 	for (i = 0; i < no_of_final_state; i++)
 	{
 		int index;
-		scanf_s("%d", &index);
+		scanf("%d", &index);
 		final_states[index] = FINAL_STATE;
 	}
 
