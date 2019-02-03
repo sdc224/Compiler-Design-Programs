@@ -80,14 +80,14 @@ int main(void)
 		for (j = 0; j < SYMBOLS; j++)
 		{
 			printf("Enter no of relations from the state %d for the symbol %d (Enter -1 for no relations): ", i, array_of_symbols[j]);
-			scanf_s("%d", no_of_relations);
+			scanf_s("%d", &no_of_relations);
 			
 			if (no_of_relations != -1)
 			{
 				for (k = 0; k < no_of_relations; k++)
 				{
 					printf("Enter relation from the state %d for the symbol %d: ", i, array_of_symbols[j]);
-					scanf_s("%d", matrix[i][j][k]);
+					scanf_s("%d", &matrix[i][j][k]);
 				}
 			}
 		}
