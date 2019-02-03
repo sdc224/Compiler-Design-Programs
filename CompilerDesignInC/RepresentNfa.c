@@ -5,7 +5,7 @@
  */
 #define MAX_STATES 10
 /**
- * \brief for setting a no for TRAP
+ * \brief for setting a number for TRAP
  */
 #define TRAP_STATE (-999)
 /**
