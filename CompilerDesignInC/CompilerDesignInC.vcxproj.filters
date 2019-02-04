@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RepresentNfa.c">
+    <ClCompile Include="ArrayOfIntegers.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Nfa.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RepresentNfaMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -24,6 +30,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AddString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nfa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayOfIntegers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

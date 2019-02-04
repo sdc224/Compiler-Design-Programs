@@ -144,10 +144,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AddString.h" />
+    <ClInclude Include="ArrayOfIntegers.h" />
+    <ClInclude Include="Nfa.h" />
     <ClInclude Include="RecognizeStrings.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RepresentNfa.c" />
+    <ClCompile Include="ArrayOfIntegers.c" />
+    <ClCompile Include="Nfa.c" />
+    <ClCompile Include="RepresentNfaMain.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
