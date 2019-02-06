@@ -21,7 +21,10 @@
     <ClCompile Include="Nfa.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="RepresentNfaMain.c">
+    <ClCompile Include="RecognizeUsingDfa.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RecognizeStringMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

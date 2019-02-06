@@ -150,8 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayOfIntegers.c" />
+    <ClCompile Include="RecognizeStringMain.c" />
     <ClCompile Include="Nfa.c" />
-    <ClCompile Include="RepresentNfaMain.c" />
+    <ClCompile Include="RecognizeUsingDfa.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

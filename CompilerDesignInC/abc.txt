@@ -1,0 +1,9 @@
+a_bc1
+int a
+a b
+2 9
+float d
+22 a
+33 d_abc
+a_99fd
+a_bc1
