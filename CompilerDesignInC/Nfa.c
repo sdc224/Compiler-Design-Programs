@@ -183,7 +183,7 @@ void print_epsilon_closure()
 		{
 			if (epsilon_closure[i][j] != i)
 			{
-				const int k1 = index_of(epsilon_closure[epsilon_closure[i][j]], MAX_STATES, -1);
+				const int k1 = index_of(epsilon_closure[epsilon_closure[i][j]], MAX_STATES, NOT_DEFINED);
 				for (int l = 0; l < k1; l++)
 				{
 					epsilon_closure[i][k++] = epsilon_closure[epsilon_closure[i][j]][l];

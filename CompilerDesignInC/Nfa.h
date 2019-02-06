@@ -36,16 +36,16 @@ int matrix[MAX_STATES][SYMBOLS][MAX_STATES];
 
 // Taking an array of symbols to get different edges for different symbols
 // We are assuming that edges are all of integer types
-int array_of_symbols[10];
+int array_of_symbols[MAX_STATES];
 
 // Define the array of relations, it is used for getting epsilon closures
 // To store no of relations from any state for the symbol Epsilon
-int array_of_relations[10];
+int array_of_relations[MAX_STATES];
 
 // This array is used for getting the epsilon closure
 // First dimension is for getting state no
 // Second dimension is used for getting no of relations defined to that particular state
-int epsilon_closure[10][10];
+int epsilon_closure[MAX_STATES][MAX_STATES];
 
 // End of global variables
 
