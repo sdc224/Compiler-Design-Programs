@@ -21,7 +21,32 @@ int main(void)
 	// char buff[FILENAME_MAX];
 	// GetCurrentDir( buff, FILENAME_MAX );
 	// printf("Current working dir: %s\n", buff);
+
+	// For Question 2 & 3
+	/*printf("Enter the string: ");
 	
+	// not using it due to append of \n at last
+	// fgets(str, 100, stdin);
+
+	if (fgets(str, sizeof str, stdin) != NULL) 
+	{
+		size_t len = strlen(str);
+		if (len > 0 && str[len - 1] == '\n') 
+		{
+			str[--len] = '\0';
+		}
+	}
+
+	const int length = strlen(str);
+	if (str[length] == '\0' && str[length - 1] != ' ')
+	{
+		str[length] = ' ';
+		str[length + 1] = '\0';
+	}
+
+	recognize_keywords_identifiers(str);*/
+
+	// For Question 5	
 	FILE *fp;
 	errno_t err;
 
@@ -62,31 +87,6 @@ int main(void)
 	}
 
 	fclose(fp);
-
-
-	// For Question 2 & 3
-	/*printf("Enter the string: ");
-	
-	// not using it due to append of \n at last
-	// fgets(str, 100, stdin);
-
-	if (fgets(str, sizeof str, stdin) != NULL) 
-	{
-		size_t len = strlen(str);
-		if (len > 0 && str[len - 1] == '\n') 
-		{
-			str[--len] = '\0';
-		}
-	}
-
-	const int length = strlen(str);
-	if (str[length] == '\0' && str[length - 1] != ' ')
-	{
-		str[length] = ' ';
-		str[length + 1] = '\0';
-	}
-
-	recognize_keywords_identifiers(str);*/
 	
 	return 0;
 }
