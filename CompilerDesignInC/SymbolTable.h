@@ -8,6 +8,7 @@
  * \brief It is not defined, value is -1
  */
 #define NOT_DEFINED (-1)
+#include "RecognizeStrings.h"
 
 /**
  * \brief Data Structure for Symbol Table
@@ -21,9 +22,11 @@ typedef struct symbol_table
 	int no_of_identifiers;
 	char address[MAX_NO_OF_ELEMENTS_IN_TABLE][16];
 	int no_of_address;
-	char operators[MAX_NO_OF_ELEMENTS_IN_TABLE][5];
+	/*char operators[MAX_NO_OF_ELEMENTS_IN_TABLE][5];
+	char operators_in_string[MAX_NO_OF_ELEMENTS_IN_TABLE][15];*/
+	operators oper[MAX_NO_OF_ELEMENTS_IN_TABLE];
 	int no_of_operators;
-	char unsigned_no[MAX_NO_OF_ELEMENTS_IN_TABLE][16];
+	float unsigned_no[MAX_NO_OF_ELEMENTS_IN_TABLE];
 	int no_of_unsigned;
 
 }symbol_table;
@@ -38,7 +41,7 @@ extern void copy_table(symbol_table to_be_copied);
 extern int install_keyword(const char *string);
 extern int install_identifier(const char *string);
 extern int install_address(char *string);
-extern int install_operators(char *string);
-extern int install_unsigned_no(char *string);
+extern int install_operators(operators op_code);
+extern int install_unsigned_no(unsigned int number);
 extern int install_entries_into_table(char *string);
 extern void display_symbol_table();

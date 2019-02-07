@@ -2,5 +2,8 @@
 
 int main(void)
 {
-	int a;
+	int a = 10;
+	int d = 29.03E-3;
+	int c = -25;
+	a <= b;
 }

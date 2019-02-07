@@ -361,3 +361,379 @@ void recognize_keywords_identifiers(char *string)
 		}
 	}
 }
+
+char *to_symbol(operators e)
+{
+	switch (e)
+	{
+		case less_than: return "<";
+		case greater_than: return ">";
+		case less_than_equal_to: return "<=";
+		case greater_than_equal_to: return ">=";
+		case equal_to: return "==";
+		case not_equal_to: return "!=";
+		case assign: return "=";
+		case plus: return "+";
+		case minus: return "-";
+		case multiply: return "*";
+		case divide: return "/";
+		case modulus: return "%";
+		case increment: return "++";
+		case decrement: return "--";
+		case ampersand: return "&";
+		case xor: return "^";
+		case or: return "|";
+		case complement: return "~";
+		case logical_or: return "||";
+		case logical_and: return "&&";
+		case not: return "!";
+		case unrecognized: return "unrecognized";
+		default: return "unknown";
+	}
+}
+
+char* to_string(operators e)
+{
+	switch (e)
+	{
+	case less_than: return "less_than";
+	case greater_than: return "greater_than";
+	case less_than_equal_to: return "less_than_equal_to";
+	case greater_than_equal_to: return "greater_than_equal_to";
+	case equal_to: return "equal_to";
+	case not_equal_to: return "not_equal_to";
+	case assign: return "assign";
+	case plus: return "plus";
+	case minus: return "minus";
+	case multiply: return "multiply";
+	case divide: return "divide";
+	case modulus: return "modulus";
+	case increment: return "increment";
+	case decrement: return "decrement";
+	case ampersand: return "ampersand";
+	case xor: return "xor";
+	case or: return "or";
+	case complement: return "complement";
+	case logical_or: return "logical_or";
+	case logical_and: return "logical_and";
+	case not: return "not";
+	case unrecognized: return "unrecognized";
+	default: return "unknown";
+	}
+}
+
+operators recognize_operators(char *string)
+{
+	int state = 0, i = 0;
+
+	while (*(string + i))
+	{
+		switch (state)
+		{
+			case TRAP:
+				state = TRAP;
+				break;
+			
+			case 0:
+				if (string[i] == '<')
+					state = 1;
+				else if (string[i] == '>')
+					state = 3;
+				else if (string[i] == '=')
+					state = 5;
+				else if (string[i] == '!')
+					state = 7;
+				else if (string[i] == '+')
+					state = 9;
+				else if (string[i] == '-')
+					state = 11;
+				else if (string[i] == '*')
+					state = 13;
+				else if (string[i] == '/')
+					state = 15;
+				else if (string[i] == '%')
+					state = 17;
+				else if (string[i] == '&')
+					state = 19;
+				else if (string[i] == '^')
+					state = 21;
+				else if (string[i] == '|')
+					state = 23;
+				else if (string[i] == '~')
+					state = 25;
+
+				break;
+
+			case 1:
+				if (string[i] == '=')
+					state = 2;
+				else if (isalpha(string[i]) || isdigit(string[i]) || string[i] == ' ')
+					state = less_than;
+				else
+					state = TRAP;
+				break;
+
+			case 2:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = less_than_equal_to;
+				else
+					state = TRAP;
+				break;
+
+			case 3:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = greater_than;
+				else if (string[i] == '=')
+					state = 4;
+				else
+					state = TRAP;
+				break;
+
+			case 4:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = greater_than_equal_to;
+				else
+					state =TRAP;
+				break;
+
+			case 5:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = assign;
+				else if (string[i] == '=')
+					state = 6;
+				else
+					state = TRAP;
+				break;
+
+			case 6:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = equal_to;
+				else
+					state = TRAP;
+				break;
+
+			case 7:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = not;
+				else if (string[i] == '=')
+					state = 8;
+				else
+					state = TRAP;
+				break;
+
+			case 8:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = not_equal_to;
+				else
+					state = TRAP;
+				break;
+
+			case 9:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = plus;
+				else if (string[i] == '+')
+					state = 10;
+				else
+					state = TRAP;
+				break;
+
+			case 10:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = increment;
+				else
+					state = TRAP;
+				break;
+
+			case 11:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = minus;
+				else if (string[i] == '-')
+					state = 12;
+				else
+					state = TRAP;
+				break;
+
+			case 12:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = decrement;
+				else
+					state = TRAP;
+				break;
+
+			case 13:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = multiply;
+				else
+					state = TRAP;
+				break;
+
+			case 14:
+				break;
+
+			case 15:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = divide;
+				else
+					state = TRAP;
+				break;
+
+			case 16:
+				break;
+
+			case 17:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = modulus;
+				else
+					state = TRAP;
+				break;
+
+			case 18:
+				break;
+
+			case 19:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = ampersand;
+				else if (string[i] == '&')
+					state = 20;
+				else
+					state = TRAP;
+				break;
+
+			case 20:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = logical_and;
+				else
+					state = TRAP;
+				break;
+
+			case 21:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = xor;
+				else
+					state = TRAP;
+				break;
+
+			case 22:
+				break;
+
+			case 23:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = or;
+				else if (string[i] == '|')
+					state = 24;
+				else
+					state = TRAP;
+				break;
+
+			case 24:			
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = logical_or;
+				else
+					state = TRAP;	
+				break;
+
+			case 25:
+				if (string[i] == ' ' || isalnum(string[i]))
+					state = complement;
+				else
+					state = TRAP;
+				break;
+
+			case 26:
+				break;
+
+			default:
+				break;
+		}
+
+		i++;
+	}
+
+	return state == TRAP ? unrecognized : state;
+}
+
+int recognize_unsigned_no(char *string)
+{
+	int l = 0;
+	STRING_LENGTH(string, l);
+	
+	int i=-1,state=0;
+	char s = string[++i];
+	
+	// State 999 is final state and -1 is a trap state
+	while(s!='\0')
+	{
+		switch(state)
+		{
+			case 0: 
+				if(isdigit(s))
+					state=1;
+				else
+					state=TRAP;
+				break;
+
+			case 1: 
+				if(isdigit(s))
+					state=1;
+				else if(s=='.')
+					state=2;
+				else if(s=='E' || s=='e')
+					state=4;
+				else if(s==' ')
+					state=FINAL;
+				else
+					state=TRAP;
+				break;
+
+			case 2: 
+				if(isdigit(s))
+					state=3;
+				else
+					state=TRAP;
+				break;
+
+			case 3: 
+				if(isdigit(s))
+					state=3;
+				else if(s=='E' || s=='e')
+					state=4;
+				else if(s==' ')
+					state=FINAL;
+				else
+					state=TRAP;
+				break;
+
+			case 4: 
+				if(s=='+' || s=='-')
+					state=5;
+				else if(isdigit(s))
+					state=6;
+				else
+					state=TRAP;
+				break;
+
+			case 5: 
+				if(isdigit(s))
+					state=6;
+				else
+					state=TRAP;
+				break;
+
+			case 6: 
+				if(isdigit(s))
+					state=6;
+				else if(s==' ')
+					state=FINAL;
+				else
+					state=TRAP;
+				break;
+
+			default:
+				break;
+		}
+
+		s=string[++i];
+	}
+
+	return state == FINAL ? 1 : 0;
+}
