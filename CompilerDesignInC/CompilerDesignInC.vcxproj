@@ -154,6 +154,7 @@
     <ClCompile Include="Nfa.c" />
     <ClCompile Include="RecognizeUsingDfa.c" />
     <ClCompile Include="SymbolTable.c" />
+    <ClCompile Include="SymbolTableMain.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

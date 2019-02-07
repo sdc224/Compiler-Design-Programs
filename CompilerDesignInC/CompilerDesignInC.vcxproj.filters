@@ -27,6 +27,9 @@
     <ClCompile Include="SymbolTable.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="SymbolTableMain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RecognizeStrings.h">
