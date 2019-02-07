@@ -147,12 +147,13 @@
     <ClInclude Include="ArrayOfIntegers.h" />
     <ClInclude Include="Nfa.h" />
     <ClInclude Include="RecognizeStrings.h" />
+    <ClInclude Include="SymbolTable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayOfIntegers.c" />
-    <ClCompile Include="RecognizeStringMain.c" />
     <ClCompile Include="Nfa.c" />
     <ClCompile Include="RecognizeUsingDfa.c" />
+    <ClCompile Include="SymbolTable.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

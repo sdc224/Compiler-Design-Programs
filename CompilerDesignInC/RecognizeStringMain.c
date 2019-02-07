@@ -22,7 +22,7 @@ int main(void)
 	// GetCurrentDir( buff, FILENAME_MAX );
 	// printf("Current working dir: %s\n", buff);
 
-	// For Question 2 & 3
+	// For Question 2 & 3 of LAB 2
 	/*printf("Enter the string: ");
 	
 	// not using it due to append of \n at last
@@ -46,7 +46,7 @@ int main(void)
 
 	recognize_keywords_identifiers(str);*/
 
-	// For Question 5	
+	// For Question 5 of LAB 2
 	FILE *fp;
 	errno_t err;
 

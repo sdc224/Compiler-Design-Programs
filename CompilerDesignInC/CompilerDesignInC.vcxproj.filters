@@ -24,8 +24,8 @@
     <ClCompile Include="RecognizeUsingDfa.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="RecognizeStringMain.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="SymbolTable.c">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArrayOfIntegers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SymbolTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
