@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "SymbolTable.h"
-#include "RecognizeStrings.h"
 
 int main(void)
 {

@@ -43,5 +43,5 @@ extern int install_identifier(const char *string);
 extern int install_address(char *string);
 extern int install_operators(operators op_code);
 extern int install_unsigned_no(unsigned int number);
-extern int install_entries_into_table(char *string);
+extern void install_entries_into_table(char *string);
 extern void display_symbol_table();

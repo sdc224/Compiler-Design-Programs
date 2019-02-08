@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "AddString.h"
 
 void init_table()
 {
@@ -174,9 +175,8 @@ int install_unsigned_no(float number)
 	return 1;
 }
 
-int install_entries_into_table(char* string)
+void install_entries_into_table(char* string)
 {
-	int state = 1;
 	const char delimiter[] = " ;\n\t,(){}";
 	char *next_token;
 	operators op_code;
@@ -201,6 +201,24 @@ int install_entries_into_table(char* string)
 		else if ((op_code = recognize_operators(copy)))
 		{
 			install_operators(op_code);
+
+			for (int i = 1; copy[i] != '\0' ; i++)
+			{
+				if (recognize_other_types(copy[i]))
+				{
+					char additional_string[50];
+
+					int k = 0;
+
+					for (int j = i; copy[j] != '\0'; j++)
+						additional_string[k++] = copy[j];
+
+					if ((op_code = recognize_operators(additional_string)))
+					{
+						install_operators(op_code);
+					}
+				}
+			}
 		}
 
 		else if (recognize_unsigned_no(copy))
@@ -215,8 +233,6 @@ int install_entries_into_table(char* string)
 
 		token = strtok_s(NULL, delimiter, &next_token);
 	}
-
-	return state;
 }
 
 void display_symbol_table()
