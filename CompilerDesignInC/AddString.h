@@ -11,3 +11,14 @@ inline int recognize_other_types(const char ch)
 	       '(' || ch == ')' || ch == '{' || ch == '}' || ch == '[' || ch == ']' || ch == ',' || ch == ' ' || ch == ':' ||
 	       ch == ';' || ch == '\n' ? 1 : 0;
 }
+
+inline int index_of(const char arr[], const int n, const char element)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] == element)
+			return i;
+	}
+
+	return -1;
+}
