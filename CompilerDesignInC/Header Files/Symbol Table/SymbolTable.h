@@ -8,7 +8,7 @@
  * \brief It is not defined, value is -1
  */
 #define NOT_DEFINED (-1)
-#include "RecognizeStrings.h"
+#include "Dfa/RecognizeUsingDfa.h"
 
 /**
  * \brief Data Structure for Symbol Table

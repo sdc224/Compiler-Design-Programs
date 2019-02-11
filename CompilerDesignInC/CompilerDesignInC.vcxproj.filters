@@ -15,36 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayOfIntegers.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Nfa.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RecognizeUsingDfa.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SymbolTable.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SymbolTableMain.c">
+    <ClCompile Include="MainFunctions\Lab3\SymbolTableMain.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementations\Symbol Table\SymbolTable.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementations\Utility\ArrayLibrary\ArrayOfIntegers.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementations\Dfa\RecognizeUsingDfa.c">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RecognizeStrings.h">
+    <ClInclude Include="Header Files\Symbol Table\SymbolTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AddString.h">
+    <ClInclude Include="Header Files\Dfa\RecognizeUsingDfa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Nfa.h">
+    <ClInclude Include="Header Files\Utility\ArrayLibrary\ArrayOfIntegers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ArrayOfIntegers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SymbolTable.h">
+    <ClInclude Include="Header Files\Utility\StringLibrary\AddString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

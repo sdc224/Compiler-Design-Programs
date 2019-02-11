@@ -1,7 +1,7 @@
-#include "RecognizeStrings.h"
-#include "AddString.h"
+#include "Utility/StringLibrary/AddString.h"
 #include <ctype.h>
 #include <stdio.h>
+#include "Dfa/RecognizeUsingDfa.h"
 
 /**
  * \brief a function to check whether the string is recognizable by the machine

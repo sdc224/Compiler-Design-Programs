@@ -1,4 +1,4 @@
-#include "ArrayOfIntegers.h"
+#include "Utility/ArrayLibrary/ArrayOfIntegers.h"
 
 int index_of(const int arr[], const int n, const int element)
 {

@@ -1,9 +1,9 @@
-#include "SymbolTable.h"
-#include "RecognizeStrings.h"
+#include "Symbol Table/SymbolTable.h"
+#include "Dfa/RecognizeUsingDfa.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "AddString.h"
+#include "Utility/StringLibrary/AddString.h"
 
 void init_table()
 {

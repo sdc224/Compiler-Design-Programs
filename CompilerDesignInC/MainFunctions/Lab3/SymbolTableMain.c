@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "SymbolTable.h"
+#include "Symbol Table/SymbolTable.h"
 
 int main(void)
 {

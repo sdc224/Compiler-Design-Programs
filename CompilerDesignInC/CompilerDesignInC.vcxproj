@@ -89,6 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\souro\source\repos\CompilerDesign\CompilerDesignInC\Header Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -143,18 +144,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AddString.h" />
-    <ClInclude Include="ArrayOfIntegers.h" />
-    <ClInclude Include="Nfa.h" />
-    <ClInclude Include="RecognizeStrings.h" />
-    <ClInclude Include="SymbolTable.h" />
+    <ClCompile Include="Implementations\Dfa\RecognizeUsingDfa.c" />
+    <ClCompile Include="Implementations\Symbol Table\SymbolTable.c" />
+    <ClCompile Include="Implementations\Utility\ArrayLibrary\ArrayOfIntegers.c" />
+    <ClCompile Include="MainFunctions\Lab3\SymbolTableMain.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayOfIntegers.c" />
-    <ClCompile Include="Nfa.c" />
-    <ClCompile Include="RecognizeUsingDfa.c" />
-    <ClCompile Include="SymbolTable.c" />
-    <ClCompile Include="SymbolTableMain.c" />
+    <ClInclude Include="Header Files\Dfa\RecognizeUsingDfa.h" />
+    <ClInclude Include="Header Files\Symbol Table\SymbolTable.h" />
+    <ClInclude Include="Header Files\Utility\ArrayLibrary\ArrayOfIntegers.h" />
+    <ClInclude Include="Header Files\Utility\StringLibrary\AddString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
