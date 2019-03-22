@@ -27,6 +27,9 @@
     <ClCompile Include="Implementations\Dfa\RecognizeUsingDfa.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\assignment\symbol_table.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header Files\Symbol Table\SymbolTable.h">

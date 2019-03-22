@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\assignment\symbol_table.c" />
     <ClCompile Include="Implementations\Dfa\RecognizeUsingDfa.c" />
     <ClCompile Include="Implementations\Symbol Table\SymbolTable.c" />
     <ClCompile Include="Implementations\Utility\ArrayLibrary\ArrayOfIntegers.c" />

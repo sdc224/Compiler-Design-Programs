@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include<ctype.h>
+#include <ctype.h>
 
 #define STRING_LENGTH(string, length) \
 	{\
@@ -63,10 +63,25 @@ int recognize_other_types(const char ch)
 
 int recognize_keywords(char *string)
 {
-	int length = 0, i = 0, state = 0, k = 0;	
+	int length = 0, state = 0, k = 0;	
 	STRING_LENGTH(string, length);
+	char* key[] = {
+		"void", "int", "char", "float", "double", "long", "if", "else", "switch", "case", "default", "break", "continue", "for",
+		"while", "do", "goto", "return", "short", "const", "struct", "typedef", "unsigned", "static", "enum", "sizeof"
+	};
 
-	while (*(string + i))
+	int size=sizeof key/sizeof key[0];
+
+	for (int i = 0; i < size; i++)
+	{
+		if (_strcmpi(string,key[i])==0)
+		{
+			return FINAL;
+		}
+	}
+	return TRAP;
+
+	/*while (*(string + i))
 	{
 		switch(state)
 		{
@@ -244,9 +259,8 @@ int recognize_keywords(char *string)
 		}
 		
 		i++;
-	}
+	}*/
 	
-	return state == FINAL ? 1 : 0;		
 }
 
 int recognize_identifier(char *string)
